@@ -16,19 +16,18 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 public abstract class Show_series extends AppCompatActivity implements AdapterView.OnItemClickListener {
-    Intent gi = getIntent();
+    Intent gi;
     TextView x_tv, d_tv, n_tv, sn_tv;
     ListView lv;
-    String[] series = gi.getStringArrayExtra("series");
-    int first_organ = gi.getIntExtra("firstOrgan",1);
-    int differenceMultiplier = gi.getIntExtra("differenceOrMultiplier", 1);
-
+    String[] series;
+    int first_organ, differenceMultiplier;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_series);
 
+        gi = getIntent();
         x_tv = findViewById(R.id.X_tv);
         d_tv = findViewById(R.id.d_tv);
         n_tv = findViewById(R.id.n_tv);
@@ -37,6 +36,12 @@ public abstract class Show_series extends AppCompatActivity implements AdapterVi
 
         lv.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
         lv.setOnItemClickListener(this);
+
+        series = gi.getStringArrayExtra("series");
+        first_organ = gi.getIntExtra("firstOrgan",1);
+        differenceMultiplier = gi.getIntExtra("differenceOrMultiplier", 1);
+        finish();
+
 
         ArrayAdapter<String> adp = new ArrayAdapter<String>(this,
                 androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, series);

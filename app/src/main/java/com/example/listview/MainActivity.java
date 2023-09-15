@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     RadioButton rb_invoice, rb_engineer;
     Button btn;
 
-    @SuppressLint({"MissingInflatedId", "WrongViewCast"})
+    Intent si;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         rb_engineer = findViewById(R.id.engineer_rb);
         rb_invoice = findViewById(R.id.Invoice_rb);
         btn = findViewById(R.id.Next_btn);
+
     }
 
     public String[] create_series(){
@@ -54,11 +55,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void pressed(View view) {
-        Intent si = new Intent(this, Show_series.class);
+        si = new Intent(this,Show_series.class);
 
         si.putExtra("series", create_series());
-        si.putExtra("firstOrgan", Integer.parseInt(first_organ.getText().toString()));
-        si.putExtra("differenceOrMultiplier", Integer.parseInt(differenceMultiplier.getText().toString()));
+        si.putExtra("organ", Integer.parseInt(first_organ.getText().toString()));
+        si.putExtra("difference_Multiplier", Integer.parseInt(differenceMultiplier.getText().toString()));
         startActivity(si);
     }
+
 }

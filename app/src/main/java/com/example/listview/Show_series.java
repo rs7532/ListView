@@ -15,7 +15,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-public abstract class Show_series extends AppCompatActivity implements AdapterView.OnItemClickListener {
+public class Show_series extends AppCompatActivity implements AdapterView.OnItemClickListener {
     Intent gi;
     TextView x_tv, d_tv, n_tv, sn_tv;
     ListView lv;
@@ -27,20 +27,19 @@ public abstract class Show_series extends AppCompatActivity implements AdapterVi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_series);
 
-        gi = getIntent();
+        lv = findViewById(R.id.List_View);
         x_tv = findViewById(R.id.X_tv);
         d_tv = findViewById(R.id.d_tv);
         n_tv = findViewById(R.id.n_tv);
         sn_tv = findViewById(R.id.Sn_tv);
-        lv = findViewById(R.id.List_View);
 
         lv.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
         lv.setOnItemClickListener(this);
 
+        gi = getIntent();
         series = gi.getStringArrayExtra("series");
-        first_organ = gi.getIntExtra("firstOrgan",1);
-        differenceMultiplier = gi.getIntExtra("differenceOrMultiplier", 1);
-        finish();
+        first_organ = gi.getIntExtra("organ",-1);
+        differenceMultiplier = gi.getIntExtra("difference_Multiplier", -1);
 
 
         ArrayAdapter<String> adp = new ArrayAdapter<String>(this,
@@ -56,10 +55,11 @@ public abstract class Show_series extends AppCompatActivity implements AdapterVi
         return sum;
     }
 
+    @SuppressLint("SetTextI18n")
     public void onItemClick(AdapterView<?> parent, View view, int position, long id){
-        x_tv.setText(first_organ);
-        d_tv.setText(differenceMultiplier);
-        n_tv.setText(series[position]);
-        sn_tv.setText(sum(position));
+        x_tv.setText(Integer.toString(first_organ));
+        d_tv.setText(Integer.toString(differenceMultiplier));
+        n_tv.setText((series[position]));
+        sn_tv.setText(Integer.toString(sum(position)));
     }
 }

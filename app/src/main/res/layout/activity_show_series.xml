@@ -48,7 +48,7 @@
         tools:layout_editor_absoluteX="556dp">
 
         <Space
-            android:layout_width="450dp"
+            android:layout_width="500dp"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
 
@@ -80,7 +80,7 @@
         tools:layout_editor_absoluteX="556dp">
 
         <Space
-            android:layout_width="450dp"
+            android:layout_width="500dp"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
 
@@ -112,7 +112,7 @@
         tools:layout_editor_absoluteX="556dp">
 
         <Space
-            android:layout_width="450dp"
+            android:layout_width="500dp"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
 
@@ -144,7 +144,7 @@
         tools:layout_editor_absoluteX="556dp">
 
         <Space
-            android:layout_width="450dp"
+            android:layout_width="500dp"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
 
@@ -176,7 +176,7 @@
         tools:layout_editor_absoluteX="556dp">
 
         <Space
-            android:layout_width="620dp"
+            android:layout_width="670dp"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
 
@@ -194,7 +194,7 @@
                 android:id="@+id/X_tv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text=".."
+                android:text="  "
                 android:textSize="30sp"
                 tools:ignore="HardcodedText" />
         </LinearLayout>
@@ -208,7 +208,7 @@
         tools:layout_editor_absoluteX="556dp">
 
         <Space
-            android:layout_width="620dp"
+            android:layout_width="670dp"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
 
@@ -226,7 +226,7 @@
                 android:id="@+id/d_tv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text=".."
+                android:text="  "
                 android:textSize="30sp"
                 tools:ignore="HardcodedText" />
         </LinearLayout>
@@ -240,7 +240,7 @@
         tools:layout_editor_absoluteX="556dp">
 
         <Space
-            android:layout_width="620dp"
+            android:layout_width="670dp"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
 
@@ -258,7 +258,7 @@
                 android:id="@+id/n_tv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text=".."
+                android:text="  "
                 android:textSize="30sp"
                 tools:ignore="HardcodedText" />
         </LinearLayout>
@@ -272,7 +272,7 @@
         tools:layout_editor_absoluteX="556dp">
 
         <Space
-            android:layout_width="620dp"
+            android:layout_width="670dp"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
 
@@ -290,7 +290,7 @@
                 android:id="@+id/Sn_tv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text=".."
+                android:text="  "
                 android:textSize="30sp"
                 tools:ignore="HardcodedText" />
         </LinearLayout>
